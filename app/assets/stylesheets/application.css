@@ -1,0 +1,246 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.pokemon-info {
+    font-size: 18px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.left-content {
+    max-width: 30%;
+    left: 25px;
+    margin-top: -125px;
+}
+
+.right-content {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    max-width: 30%;
+}
+
+.credit {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+}
+
+.form-container {
+    margin-top: -150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.credit {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 18px;
+    color: black; 
+    text-decoration: none;
+}
+.form-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+.form-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px 0 0 25px;
+    width: 250px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.file-input {
+    display: none;
+    background-color: #fff;
+}
+
+.file-label {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 25px 0 0 25px;
+    cursor: pointer;
+}
+
+.form-button {
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #ff9900;
+}
+
+.form-button i {
+    font-size: 18px;
+}
+
+.trainer {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 35%;
+}
+
+.trainer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team {
+    margin-bottom: 20px;
+}
+
+.team h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.pokemon {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffcc00;
+}
+
+.move {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.move.empty {
+    background-color: #fff;
+}
+
+.known-item {
+    height: 439px;
+}
+
+.unknown-item {
+    height: 439px;
+}
+
+.team-grid {
+    background-color: #ffcc00;
+    border-radius: ;
+    width: 255px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#search {
+    margin-top: 15px;
+}
+.home-button {
+    display: inline-block;
+    background-color: #ffd700; /* Solid yellow color */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top:0px;
+    margin-right: 10px; /* Space between home button and search bar */
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #ffbf00; /* Slightly darker yellow on hover */
+}
+
+.form-container1 {
+    display: flex;
+    align-items: center;
+}
+.flashes {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+#flash-message-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #444;
+    opacity: 0.9;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#flash-message-container.show {
+    display: block;
+}
+
+#flash-message-container.warning {
+    background-color: #f39c12;
+}
+
+
