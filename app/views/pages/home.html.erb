@@ -1,45 +1,45 @@
 <!-- app/views/pages/home.html.erb -->
 <h1 style="display: flex; flex-direction: column; align-items: center; font-size:48px;">Showdown Helper</h1>
 <div class="container">
-  <div class="left-content">
-    <div class="quote">
-      <h3>
-        "The journey of wisdom is non-conclusive as<br>
-        the more we understand, the more we are able<br>
-        to look at the same experience differently."
-      </h3>
-      <a href="https://illusiontoreality.com/2010/11/25/wisdom-begets-wisdom/">- ASITISNOW</a>
-    </div>
-  </div>
-  <div class="right-content">
+<div class="left-content">
+<div class="quote">
     <h3>
-      Showdown Helper is a crowdsourcing tool to help competitors<br>
-      learn more about battling strategies seen on Showdown,<br>
-      while working together to build up a database of trainers<br>
-      and their teams, aiming to facilitate insight and innovations<br>
+    "The journey of wisdom is non-conclusive as<br>
+    the more we understand, the more we are able<br>
+    to look at the same experience differently."
     </h3>
-  </div>
+    <a href="https://illusiontoreality.com/2010/11/25/wisdom-begets-wisdom/">- ASITISNOW</a>
+</div>
+</div>
+<div class="right-content">
+<h3>
+    Showdown Helper is a crowdsourcing tool to help competitors<br>
+    learn more about battling strategies seen on Showdown,<br>
+    while working together to build up a database of trainers<br>
+    and their teams, aiming to facilitate insight and innovations<br>
+</h3>
+</div>
 </div>
 <div class="form-container">
-  <%= form_with url: search_trainer_path, method: :get, local: true do %>
-    <div class="input-container">
-      <%= text_field_tag :trainer_name, nil, class: "form-input", placeholder: "Search for a trainer", required: true %>
-      <button type="submit" class="form-button">
-        <i class="fas fa-search"></i>
-      </button>
-    </div>
-  <% end %>
-  <%= form_with url: upload_file_path, method: :post, local: true, html: { multipart: true } do %>
-    <div class="input-container">
-      <%= file_field_tag :file, id: "replay_file", class: "file-input", required: true, onchange: "updateFileName()" %>
-      <label for="replay_file" class="file-label">
-        Upload a replay
-      </label>
-      <button type="submit" class="form-button">
-        <i class="fas fa-upload"></i>
-      </button>
-    </div>
-  <% end %>
+<%= form_with url: search_trainer_path, method: :get, local: true do %>
+<div class="input-container">
+    <%= text_field_tag :trainer_name, nil, class: "form-input", placeholder: "Search for a trainer", required: true %>
+    <button type="submit" class="form-button">
+    <i class="fas fa-search"></i>
+    </button>
+</div>
+<% end %>
+<%= form_with url: upload_file_path, method: :post, local: true, html: { multipart: true } do %>
+<div class="input-container">
+    <%= file_field_tag :file, id: "replay_file", class: "file-input", required: true, onchange: "updateFileName()" %>
+    <label for="replay_file" class="file-label">
+    Upload a replay
+    </label>
+    <button type="submit" class="form-button">
+    <i class="fas fa-upload"></i>
+    </button>
+</div>
+<% end %>
 </div>
 <a class="credit" href="https://www.deviantart.com/serpexnessie/art/My-Pokemon-Platinum-Team-626272853" target="_blank">Background image by serpexnessie</a>
 
